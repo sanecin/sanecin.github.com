@@ -31,24 +31,29 @@ body {
 	cursor:default;font-family:Verdana,Tahoma,Comic,Courier,Arial;
 	font-size:12px;font-weight:600;/*line-height:100%;*/
 	background:#408080;
-	color:#ffffa0;
+	color:rgba(0,0,0,0.5);
+	overflow:hidden;
 }
 
 .shifter {
     position:absolute;
     /*visibility:hidden;*/
-    background:#f0f;
+    background:rgba(0,0,0,0.1);
     bottom:50%;left:50%;
-    width:50%;height:50%;    /* ... size ... */
+    width:77%;height:77%;  /*   ... size ... */
     /* width:200px;height:100px; */
 }
 
 .holder {
-    position:relative;/* absolute or  relative */
+    position:absolute;/* absolute or  relative */
     visibility:visible;/*  */
-    background:#ff0;
+    background:rgba(255,255,255,0.2);
     bottom: -50%;left:-50%;
     width:100%;height:100%;
+}
+
+.in {
+    width:256px;height:256px;
 }
 
 #serv {
@@ -107,7 +112,7 @@ function init(){
 
 	if(App.otl){
 		App.serv.style.visibility="visible";//log_("ОТЛАДКА");
-		App.monT.innerHTML="Tx:"+1000/App.tx+" fps";
+		App.mont.innerHTML=1000/App.tx+" fps";
 	}
 
 	tic();// ...
@@ -122,7 +127,7 @@ function tic() {
 
 	clearTimeout(App.once);
 	App.tn=Date.now();
-	App.tr=Math.max( 0,App.tx+App.tl-App.tn);
+	App.tr=Math.max(7,App.tx+App.tl-App.tn);
 	App.once=setTimeout(tic,App.tr);
 	App.tl=App.tn+App.tr;
 
@@ -144,8 +149,8 @@ function tic() {
 //		App.monT.innerHTML="Tx:"+App.tx;
 //		App.monr.innerHTML=App.tr;
 
-//		App.monW.innerHTML=document.body.clientWidth;
-//		App.monH.innerHTML=document.body.clientHeight;
+		App.monW.innerHTML=document.body.clientWidth;
+		App.monH.innerHTML=document.body.clientHeight;
 
 	}
 
@@ -166,6 +171,11 @@ if (window.addEventListener) window.addEventListener('load',init, false); else w
 		</div>
 	</div>
 
+	<div class="shifter in">
+		<div class="holder">in
+		</div>
+	</div>
+
 <i id="serv" class="b_r7">
 TicMon=========<i id="monX"></i><br />
 Width:<i id="monW"></i><br />
@@ -175,8 +185,12 @@ mTic:<i id="monv"></i><br />
 FotoTic:<i id="monV"></i><br />
 Rate:<i id="monR">0</i><br />
 Slide:<i id="monN">0</i><br />
-<i id="monT" style="background:#00ff00;width:20px;">Tx</i><br />
-<i id="monr" style="background:#00ffff;width:20px;">Tr</i><br />
+<i style="border:1px #000 solid;">
+	<i id="mont">fps</i><br />
+	<i id="monT" style="background:#00ff00;width:20px;">Tx</i><br />
+	<i id="monr" style="background:#00ffff;width:20px;">Tr</i><br />
+</i>
+
 </i>
 
 </body></html>
