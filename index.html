@@ -5,7 +5,7 @@
   -->
   
 <!DOCTYPE html>
-<html  xmlns="http://www.w3.org/1999/xhtml" class="p_ae" lang="ru">
+<html  xmlns="http://www.w3.org/1999/xhtml" class="p_re" lang="ru">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta name="description" content="[TeRmiNuS_][index_][416251158a146e5279.62915411@[_pack_w_1.0.xhtml]¤Main¤Hili¤0¤]" />
@@ -16,7 +16,7 @@
   <title>[sanecin][github.com][986951158a146e4b06.28163668]</title>
 <style>
 
-html {font-size: 100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust: 100%; }
+html {font-size: 100%;}
 img { -ms-interpolation-mode: bicubic; }
 svg:not(:root) { overflow: hidden; }
 *:focus{outline:none;}
@@ -41,12 +41,11 @@ body {
     /*visibility:hidden;*/
     background:rgba(0,0,0,0.1);
     bottom:50%;left:50%;
-    width:77%;height:77%;  /*   ... size ... */
-    /* width:200px;height:100px; */
+    /* width:200px;height:100px; */  /*   ... size ... */
 }
 
 .holder {
-    position:absolute;/* absolute or  relative */
+    position:relative;/* absolute or  relative */
     visibility:visible;/*  */
     background:rgba(255,255,255,0.2);
     bottom: -50%;left:-50%;
@@ -55,6 +54,11 @@ body {
 
 .in {
     width:256px;height:256px;
+}
+
+.in_ {
+    width:1024px;height:512px;
+/*    width:77%;height:77%; */
 }
 
 #serv {
@@ -86,7 +90,7 @@ body {
 </style>
 
    <script>
-      document.createElement("header");
+      document.createElement("header");	// ... IE ...
       document.createElement("section");
       document.createElement("footer");
       document.createElement("nav");
@@ -101,6 +105,7 @@ body {
 	App.once=null;	// ... instance ...
 	App.tx=16;
 	App.tic=0;
+	App.ntic=0;
 
 	App.otl=1;//1//0//
 
@@ -116,7 +121,28 @@ function init(){
 		App.mont.innerHTML=1000/App.tx+" fps";
 	}
 
+	for(i=(fit=document.querySelectorAll (".fit")).length;i--;) {fit[i].scale=1;fit[i].zoom=1;}//
+
 	tic();// ...
+
+}
+
+function mon() {
+// ...
+// ... main ...
+
+/**/
+//		App.monS.innerHTML=App.scale_o;
+//		App.monv.innerHTML=App.ntic;
+		App.monV.innerHTML=App.tic;
+//		App.monR.innerHTML=App.rate;
+		App.monT.style.width=App.tx*4+"px";
+		App.monr.style.width=App.tr*4+"px";
+//		App.monT.innerHTML="Tx:"+App.tx;
+//		App.monr.innerHTML=App.tr;
+
+		App.monW.innerHTML=document.body.clientWidth;
+		App.monH.innerHTML=document.body.clientHeight;
 
 }
 
@@ -132,28 +158,37 @@ function tic() {
 	App.once=setTimeout(tic,App.tr);
 	App.tl=App.tn+App.tr;
 
-//	if(foto.mtic++<4) return;
-//	foto.mtic=0;
+//	if(App.ntic++<4) return;
+//	App.ntic=0;
 
 	App.tic++;
 
 ////
 
-	if (App.otl) {
-/**/
-//		App.monS.innerHTML=App.scale_o;
-//		App.monv.innerHTML=App.mtic;
-//		App.monV.innerHTML=App.tic;
-//		App.monR.innerHTML=App.rate;
-		App.monT.style.width=App.tx*4+"px";
-		App.monr.style.width=App.tr*4+"px";
-//		App.monT.innerHTML="Tx:"+App.tx;
-//		App.monr.innerHTML=App.tr;
+	if (App.otl) mon();
 
-		App.monW.innerHTML=document.body.clientWidth;
-		App.monH.innerHTML=document.body.clientHeight;
+// ... FIT ...
+
+	for(i=fit.length;i--;){//
+
+		j=fit[i];//		j=fit;
+		f=fit[i].querySelector("div").style;//		f=j.style;
+		z=fit[i].zoom;//		z=j.zoom;
+
+		sc_=Math.min(j.parentNode.clientWidth/j.clientWidth,j.parentNode.clientHeight/j.clientHeight);
+		if (j.scale!=sc_){
+			j.scale=sc_;
+			f.webkitTransform="scale("+sc_*z+")";
+			f.MozTransform="scale("+sc_*z+")";
+			f.OTransform="scale("+sc_*z+")";
+
+////			f.top=(sc_*z-1)*j.clientHeight/2+"px";
+////			f.left=(50-50/sc_)+"%";
+		}
 
 	}
+
+//
 
 }
 
@@ -167,13 +202,14 @@ if (window.addEventListener) window.addEventListener('load',init, false); else w
 
 <body class="p_af">
 
-	<div class="shifter">
-		<div class="holder">
+	<div class="fit shifter in">
+		<div class="holder">in
 		</div>
 	</div>
 
-	<div class="shifter in">
-		<div class="holder">in
+	<div class="fit shifter in_">
+		<div class="holder">
+			in_
 		</div>
 	</div>
 
