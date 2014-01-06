@@ -1,0 +1,115 @@
+html {font-size: 100%;}
+img { -ms-interpolation-mode: bicubic; }
+svg:not(:root) { overflow: hidden; }
+*:focus{outline:none;}
+/*:fullscreen {background:#000040;color:white;}*/
+table {border-collapse:collapse;border-spacing: 0;}
+table td{vertical-align: middle;}
+* {padding:0px;margin: 0px;}
+
+p,i {display:inline-block;}/* */
+body,div,section,header,article,footer,menu,aside {display:block}	/* html5 ... :/ ... */
+
+body {
+	cursor:default;font-family:Verdana,Tahoma,Comic,Courier,Arial;
+	font-size:12px;font-weight:600;/*line-height:100%;*/
+	background:#408080;
+	color:rgba(0,0,0,0.5);
+
+	/*overflow:hidden; ... comment to clear style ... */
+}
+
+iframe {
+	border:none;
+}
+
+h1 {
+	font-size:32px;line-height:32px;
+	color:#ffff00;text-shadow:-1px -1px 0px #000000,-1px 1px 0px #000000,1px -1px 0px #000000,1px 1px 0px #000000,2px 2px 5px #000000;
+}
+
+.shifter {
+	position:absolute;
+	visibility:hidden;/**/
+	background:rgba(0,0,0,0.1);
+	bottom:50%;right:50%;
+	/* width:200px;height:100px; */  /*   ... size ... */
+	/* width:77%;height:77%; */
+}
+
+.holder,.holder7 {
+    position:relative;/* absolute or  relative */
+    visibility:visible;/*  */
+    background:rgba(255,255,255,0.2);
+    bottom: -50%;right:-50%;
+ 	width:100%;height:100%;
+}
+.holder7 {
+    bottom: -25%;left:-25%;
+}
+
+.q {
+	width:16px;height:16px;
+}
+
+.sq {
+	width:256px;height:256px;
+}
+
+.sqi {
+	width:512px;height:512px;
+}
+
+.sqic {
+	width:1024px;height:512px;
+}
+
+.sql {
+	position:relative;width:33.3334%;height:33.3334%;float:left;margin:0px;
+}
+
+.sql_>div {
+	position:relative;
+	width:80%;height:80%;margin:10%;
+	background-repeat:no-repeat;
+	background:rgba(0,255,255,0.1);
+}
+
+.lg {
+    width:512px;height:256px;
+}
+
+.lv {
+    width:256px;height:512px;
+}
+
+#serv {
+	background:rgba(255,255,255,0.2);
+	color:rgba(0,0,0,0.5);
+	position:absolute;
+	left:2%;top:2%;
+	width:250px;
+	height:200px;
+	border:none;/*2px #f0f dotted;*/
+	visibility:hidden; /**//* DEBUG +coment */
+}
+
+/*POSITION*/
+.p_a {position:absolute;}
+.p_af {position:absolute;top:0px;right:0px;bottom:0px;left:0px;}
+.p_ah {position:absolute;height:100%;top:0px;}
+.p_ahr {position:absolute;height:100%;top:0px;right:5px;}
+.p_ahl25 {position:absolute;height:100%;top:0px;left:100%;margin-left:25px;}
+.p_ae {position:absolute;width: 100%;height:100%;}
+.p_am {position:absolute;top:0px;right:0px;bottom:0px;left:0px;margin:auto auto;}
+.p_ac {position:absolute;top:0px;right:0px;bottom:0px;left:0px;margin:auto auto;}/*width:0;height:0;*/
+.p_r {position:relative;}
+.p_rt20 {position:relative;margin-top:20px;}
+.p_re {position:relative;width: 100%;height:100%;}
+.p_f {position:fixed;}
+.p_s {position:static;}
+
+/*FLOAT*/
+.fl_l {float: left;}
+.fl_r {float: right;}
+
