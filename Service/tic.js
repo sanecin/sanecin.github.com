@@ -14,17 +14,17 @@ function Tic(k) {
 		k.tn=Date.now();
 		k.tr=Math.min(Math.max(7,k.tx+k.tl-k.tn),k.tx);
 
+		k.tl=k.tn+k.tr;
+
 		k.once=setTimeout(Tic,k.tr,k);
 
 		if (isF(k.fn)) k.fn(k);// ... ?q ... need? ... this ...
 //		eval(k.fn+"(k)");
 
-		k.tl=k.tn+k.tr;
-
 //		if(k.ntic++<4) return;
 //		k.ntic=0;
 
-		k.tic++;// ... ?q ... need? ...
+		k.tic++;// ... ?q ... need? ... 
 
 //		k.dvs.innerHTML=k.tr; // ... bad debug ...
 
