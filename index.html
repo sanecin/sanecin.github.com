@@ -6,10 +6,10 @@
   -->
   
 <!DOCTYPE html>
-<html  xmlns="http://www.w3.org/1999/xhtml" class="p_re" lang="ru">
+<html  xmlns="http://www.w3.org/1999/xhtml" class="p_af" lang="ru">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=windows-1251" />
-<meta name="description" content="[mdx][t_s/index.html][[2452b0411cdd9208.85346307@[_pack_w_1.0.xhtml]¤Main¤Hili¤0¤]" />
+<meta name="description" content="[mdx][t_s/index.html][[8908549693e80e0c15.15884541@[_pack_w_1.0.xhtml]¤Main¤Hili¤0¤]" />
 <meta name="keywords" content="HTML,CSS,CSS3,HTML5" />
 <meta name="author" content="SanEcIn" />
 <meta name="revised" content="17/12/2013" />
@@ -17,46 +17,63 @@
 <link rel="shortcut icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAARElEQVR4nGNkYGD4z0ABYAQZcODAAbI0Ozg4MLAgc0gBMEuZsLiIGAwH6AaQDEYNGDUABFjQ+CRnLLgB5GYoRnJsRQYAiV4MapEj6BYAAAAASUVORK5CYII=" />
 <link rel="stylesheet" media="all" type="text/css" href="Service/style.css" />
 
-<title>[MDX/index.html][79514724c7d1d985.95816717]</title>
+<title>[bild/t_s/index.html][8908549693e80e0c15.15884541]</title>
 
 <style>
 
 </style>
 
-<script type="text/javascript"  src="Service/app.js"></script>
+<script type="text/javascript"  src="Service/app.js"></script><!--script type="text/javascript"  src="http://lib.mdx.googlecode.com/git/JS/app.js"></script-->
 <script type="text/javascript"  src="Service/event.js"></script>
-<!--script type="text/javascript"  src="http://github.sanecin.ru/code/js/id.js"--></script><script type="text/javascript"  src="Service/id.js"></script>
+<!--script type="text/javascript"  src="http://sanecin.github.com/code/js/id.js ... или ... http://sanecin.ru/code/js/id.js"></script--><script type="text/javascript"  src="Service/id.js"></script>
 <script type="text/javascript"  src="Service/tic.js"></script>
 <script type="text/javascript"  src="Service/fit.js"></script>
+<script type="text/javascript"  src="Service/mdx.js"></script>
 <!--script type="text/javascript"  src="Service/script.js"></script>
 <script type="text/javascript"  src="https://mdx.googlecode.com/git/script.js"></script-->
 
 <script id="scri" type="text/javascript">
-	App.otl=1;//
-//	App.tx=1000/24;//
-
-	Event.On(window,"load",function (){Id.mdx.innerHTML=window[mdx];});
+	App.otl=1;////
+//	App.tx=1000/20;//
 
 function ex_i(k){
-	k.dvs.innerHTML="<h1>"+k.tic+"</h1>";
+	k.dvs.innerHTML=k.tic+" sec";
 	Fit.all(k);
 }
 
 </script>
 
-<script type="text/javascript"  src="Service/ga.js"></script>
-
-	
 </head>
 
-<body class="p_af">
+<body class="p_re">
 
-	<div class="fit shifter lg" data-zoom="0.9" data-fps="2" data-call="function(k){k.dvs.innerHTML=k.tic;Fit.all(k);}">
+	<div class="fit shifter lg lgu" data-zoom="0.3" data-fps="1" data-call="Fit.all">
+		<div class="fil holder">lgu
+		</div>
+	</div>
+
+	<div class="fit shifter lg" data-zoom="0.3" data-tx="1000" data-call="k.dvs.innerHTML=Math.floor(k.tic/60)%60+' min';Fit.all(k);">
 		<div class="fil holder">lg
 		</div>
 	</div>
 
-	<div class="fit shifter lv" data-zoom="0.9" data-fps="3" data-call="Fit.all">
+	<div class="fit shifter lg lgd" data-zoom="0.3" data-fps="1" data-call="ex_i(k)" data-mon="mon">
+		<div class="fil holder">lgd
+		</div>
+	</div>
+
+	<div class="fit shifter lg lgr" data-zoom="0.3" data-fps="1" data-call="(function(k){k.dvs.innerHTML=k.tic%60+' sec<br />'+k.tic+' sec';Fit.all(k)})">
+		<div class="fil holder">lgr
+		</div>
+	</div>
+
+	<div class="fit shifter lg lgl" data-zoom="0.3" data-fps="1" data-call="k.dvs.innerHTML=Math.floor(k.tic/3600)+' hours';Fit.all(k)">
+		<div class="fil holder">lgl
+		</div>
+	</div>
+
+<!--
+	<div class="fit shifter lv" data-zoom="0.9" data-fps="24" data-mon="mon" data-call="Fit.all">
 		<div id="mdx" class="fil holder">lv
 		</div>
 	</div>
@@ -66,59 +83,49 @@ function ex_i(k){
 
 
 			<div class="sql">
-					<!--iframe src="index_dom.html" srx="xindex_m.html" class="p_ae"></iframe-->
-			</div>
+					iframe src="index_dom.html" srx="xindex_m.html" class="p_ae"></iframe-->
+<!--			</div>
 
 			<div class="sql">
-					<!--iframe src="div_3g_index.html" srx="index_m.html" class="p_ae" title="index_m"></iframe-->
-			</div>
+					iframe src="div_3g_index.html" srx="index_m.html" class="p_ae" title="index_m"></iframe-->
+<!--			</div>
 
 			<div class="sql">
-					<!--iframe src="xindex.html" class="p_re"></iframe-->
-			</div>
+					iframe src="xindex.html" class="p_re"></iframe-->
+<!--			</div>
 
 
 			<div class="sql">
-				<div class="fit shifter sqi" data-zoom="0.9" data-fps="1.4" data-call="ex_i"><div class="fil holder">
-					<!--iframe src="sqlgv_index.html" class="p_re"></iframe-->
-				</div></div>
+				<div class="fit shifter sq" data-zoom="0.9" data-tx="60000" data-call="ex_i"><div class="fil holder">
+					iframe src="sqlgv_index.html" class="p_re"></iframe-->
+<!--				</div></div>
 			</div>
 
 			<div class="sql" style="background:rgba(64,128,128,0.5);">
 				<div class="fit shifter sqi" data-zoom="0.9" data-fps="2.4"><div class="fil holder">
-					<!--iframe src="fps_index.html" class="p_ae"></iframe-->
-				</div></div>
+					¤¤iframe src="fps_index.html" class="p_ae"></iframe-->
+<!--				</div></div>
 			</div>
 
 			<div class="sql">
-					<!--iframe src="tab_browser_index.html" class="p_ae"></iframe-->
-			</div>
+					iframe src="tab_browser_index.html" class="p_ae"></iframe-->
+<!--			</div>
 
 
 			<div class="sql">
-					<!--iframe src="lgv_index.html" class="p_ae"></iframe-->
-			</div>
+					iframe src="lgv_index.html" class="p_ae"></iframe-->
+<!--			</div>
 
 			<div class="sql">
-					<!--iframe src="fs_index.html" class="p_ae"></iframe-->
-			</div>
+					iframe src="fs_index.html" class="p_ae"></iframe-->
+<!--			</div>
 
 			<div class="sql">
-					<!--iframe src="browsers_index.html" class="p_ae"></iframe-->
+					iframe src="browsers_index.html" class="p_ae"></iframe
 			</div>
 
 		</div>
-	</div>
-
-	<div class="p_a" style="width:50%;height:50%;bottom:0px;left:0px;">
-			<!--div class="fit shifter p_ae"--><!-- безЪАДАпТАцИИfitIFramУнеНуженЪ ... -->
-			<div class="fit shifter sqic">
-					<div class="fil holder">
-						<!--iframe src="index_imgsvg.html" class="fil holder"></iframe>
-						<iframe src="calc_.html" class="p_re"></iframe-->
-					</div>
-			</div>
-	</div>
+	</div>-->
 
 <div class="p_r fl_l q" title="... открыть DOM browser ...
 (консоль для просмотра)
@@ -126,23 +133,26 @@ function ex_i(k){
 ... bookMarkLet ..." onclick="var W=open('','dom-X','width='+Math.round((y=screen.width)*0.4)+',height='+Math.round((x=screen.height)*0.7)+',top='+Math.round(x*0.15)+',left='+Math.round(y*0.5)+',resizable');W.document.write('&lt;title&gt;DOM of ['+document.title+']&lt;/title&gt;&lt;style&gt;*{background:#ffffd0;color:#000000;border:1px #000000 solid;}&lt;/style&gt; &lt;script&gt; var ob; var objs=new Array(); var lvls=new Array(); function nav(IB) { L=document.forms[0].elements[0].value; for(e=L.length-1;e&gt;=0;--e) if(isDigit(L.charAt(e))){ for(s=e-1;s&gt;=0;--s) if(!isDigit(L.charAt(s)))break;break; } ++s; if(e&gt;0){ e++;oldNum=L.substring(s,e);newNum=\'\'+(parseInt(oldNum,10)+IB); while(newNum.length&lt;oldNum.length) newNum=\'0\'+newNum; newstr=L.substring(0,s)+newNum+L.slice(e); if(typeof(eval(\'window.opener.\'+newstr))!=null &amp;&amp; typeof(eval(\'window.opener.\'+newstr))!=\'undefined\') {document.forms[0].elements[0].value=newstr;getProps();} } } function isDigit(c) {return (\'0\'&lt;=c&amp;&amp;c&lt;=\'9\')} function resized() {document.getElementById(\'doceval\').style.height=Math.max(1,document.body.clientHeight-document.getElementById(\'doceval\').offsetTop)-20;} onresize=resized; function evalExpr() { ob=document.forms[0].elements[0].value;var x=ob.split(\'[\'); lvls.length=0; for(var i=0;i&lt;x.length;i++) lvls=lvls.concat(x[i].split(\'.\')); for(var i=0;i&lt;lvls.length;i++)if(lvls[i].indexOf(\']\')==lvls[i].length-1)lvls[i]=lvls[i].replace(\']\',\'\'); } function getProps() { evalExpr(); var obj; try{obj=eval(\'window.opener.\'+ob);}catch(e) {alert(\'Could not evaluate \'+ob);return} ob=document.forms[0].elements[0].value; var obj=eval(\'opener.\'+ob); var slct=document.forms[0].elements[\'doceval\']; slct.length=0; objs.length=0; for(var elem in obj){ objs[objs.length]=elem; var newOpt=document.createElement(\'OPTION\'); slct.add(newOpt,0); } objs=objs.sort(); for(var i=0;i&lt;objs.length;i++){ var opt=slct[i];opt.name=objs[i]; try{opt.innerText=objs[i]+\' = \'+obj[objs[i]];}catch(e) {opt.innerText=objs[i]+\' = \'+typeof(objs[i])} } try{D.innerHTML=\'? \'+obj.replace(/&lt;/g,\'&lt;\').replace(/\\\\n/g,\'&lt;br&gt;\')}catch(e) {D.innerHTML=\'? \'+typeof(obj);return} } function selectProp(idx){ if(idx&lt;0)return; lvls[lvls.length]=objs[idx];showProps(); } function goUp(){ if(lvls.length&gt;1){lvls.length--;showProps()} } function showProps(){ var s=\'\'; for(var i=0;i&lt;lvls.length;i++){ if(!isNaN(lvls[i])) s+=\'[\'+lvls[i]+\']\'; else{if(s!=\'\')s+=\'.\';s+=lvls[i]} } document.forms[0].elements[0].value=s; document.getElementById(\'N\').style.display=s.indexOf(\'[\')&gt;0?\'inline\':\'none\'; getProps(); } &lt;/script&gt; &lt;body onLoad=\'getProps();resized()\' style=\'margin:0px\'&gt;&lt;form onSubmit=\'getProps();return false\'&gt;&lt;input type=text value=document size=40&gt; &lt;input type=submit value=\'Get\' onClick=\'getProps()\'&gt; &lt;input type=button value=\'Up\' onClick=\'goUp()\'&gt; &lt;span id=\'N\' style=\'display:none\'&gt;&lt;input type=button value=\'Left\' onclick=\'nav(-1)\'&gt;&lt;input type=button value=\'Right\' onclick=\'nav(1)\'&gt;&lt;/span&gt;&lt;div id=\'D\'&gt;&lt;/div&gt;&lt;select id=\'doceval\' size=\'20\' style=\'width:100%\' onclick=\'selectProp(this.selectedIndex)\'&gt;&lt;/select&gt;&lt;/form&gt;&lt;/body&gt;');W.document.close();W.focus();"><div class="p_af" style="background-image:url('data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAX0lEQVR4nGNkYGD4z0ABYAQZ8B9oxMGDB/AqtLd3wNQM1M0C4xw4cIChvr6BPBeQrAvdgP9kGoHiBRBADwds/kYHKAYQowGvAYPPBcQYTnsXEDKUdi4g1jCKXUBxXgAAvJ8ioRj1NjkAAAAASUVORK5CYII=');background-size:100% 100%;"></div></div>
 
 <i id="serv" class="b_r7">
-TicMon=========<i id="monX"></i><br />
+TicMonitor=========<i id="monX"></i><br />
+Tic:<i id="mon_tic"></i><br />
 Width:<i id="monW"></i><br />
 Height:<i id="monH"></i><br />
-Scale:<i id="monS"></i><br />
+Scale:<i id="mon_scale"></i><br />
 mTic:<i id="monv"></i><br />
-FotoTic:<i id="monV"></i><br />
-Rate:<i id="monR">0</i><br />
+Rate:<i id="mon_tx">0</i> (fps:<i id="mon_fps">0</i>)<br />
+Dalay:<i id="mon_tr">0</i><br />
 Slide:<i id="monN">0</i><br />
-<i style="border:1px #000 solid;">
-	<i id="mont">fps</i><br />
+<br />
+<br />
+<br />
+<i style="border:1px #000 solid;margin-left:10px;">
+	<i id="mont">Remaining time meter</i><br />
 	<div id="monT" style="position:relative;background:#00ff00;height:4px;">
 		<div id="mont1" style="position:absolute;height:100%;background:#ffe000;"> </div>
 		<div id="mont2" style="position:absolute;height:100%;background:#ff0000;"> </div>
 		<div id="monr" style="position:absolute;height:100%;background:rgba(0,0,0,0.5);"> </div>
 	</div>
 </i><br />
-w.time.ms:<i id="monx">0</i><br />
 
 </i>
 
