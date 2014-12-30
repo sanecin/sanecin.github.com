@@ -27,11 +27,14 @@ eval_=new Function('return eval(arguments[0]);');// ... dojo ...
 
 */
 
+// ... пОзвОляЕтЪ ... can ...
+// ... "funcname"| "function(k){ ... k=&object ... }"|"pure_lambda_function_code" ...
 function eval_(i){
-	var j;
+	var e="";
 	if(!i) return false;
-	if(isF(i)) return i;
-	try {if(isF(j=eval("(function(){return "+i+"}())")))	return j;} catch (e) {}
+	try {if(isF(eval(i))) return eval(i);} catch (e) {}
+	if(!isS(i)) return false;
+	try {return function(k){eval(i)}} catch (e) {}
 	return false;
 }
 
@@ -41,17 +44,17 @@ function eval_(i){
 // ... for Tic ...
 //		k.once=null;	// ... instance ...
 		k.tl=Date.now();	// ... pointtime ...
-		k.tx=Math.floor(1000/k.dataset.fps||k.dataset.tx||1000/24);	// ... default 40 mS rate ...
+		k.tx=Math.floor(1000/k.dataset.fps||k.dataset.tx||1000/20);	// ... default 20 mS rate ...
 		k.tic=0;	// ... count ...
 		k.ntic=0;	// ... Ncount ...
 
-// ... for Fit ... instead DOM.dataset ... was difer?q ...
-		k.fn=k.fn||eval_("Fit."+k.dataset.fit)||eval_(k.dataset.call)||Fit.all||null;	// ... data-call ... Fit ...
+// ... for Fit ... instead DOM.dataset ... was difer?q ... ||eval("Fit."+k.dataset.fit) ...
+		k.fn=k.fn||eval_(k.dataset.call)||Fit.all||null;	// ... data-call ... Fit ...
 		k.scale=k.scale||k.scale||k.dataset.scale||1;// ... data-scale="..." ...
 		k.zoom=k.zoom||k.dataset.zoom||1;// ... data-zoom="..." ...
 		k.dvs=k.dvs||k.querySelector(".fil")||k.firstChild||null;// ... first? ... :/ ...
 		k.dvr=k.dvr||k.parentNode||null;// ... first? ... :/ ...
-		k.mon=k.mon||k.dataset.mon||null;// ... mon ...
+		k.mon=k.mon||eval_(k.dataset.mon)||null;// ... mon ...
 
 // ... Fit(k) loop ... tic.js REQUIRED ...
 		Tic(k);
@@ -86,40 +89,45 @@ function eval_(i){
 		// ... debug ...  !w!c ...
 		if(App.otl && Id.serv){
 			Id.serv.style.visibility="visible";//log_("ОТЛАДКА");
-			App.mont.innerHTML=1000/App.tx+" fps";
+//			Id.mont.innerHTML=1000/App.tx+" fps";
 		}
 
 	}
 
 // ... toGO ... common
-	if (window.addEventListener) window.addEventListener("load",Fit._, false); else window.onload=Fit._;
+//	if (window.addEventListener) window.addEventListener("load",Fit._, false); else window.onload=Fit._;
 
 // ... in case ... event.js REQUIRED ...
 //	if (typeof(Event.On)==="function") ... ???
-//		Event.On(window,"load",Fit._);
+
+// ... 1.0 ...
+		Event.On(window,"load",Fit._);
 
 //======== MON ===========
 
-function mon() {
+function mon(k) {
 // ...
-// ... main ...
+		var i=230/k.tx;
 
-/**/
-//		App.monv.innerHTML=Fit.ntic;
-		App.monV.innerHTML=Fit.tic;
-//		App.monR.innerHTML=Fit.rate;
-		App.monT.style.width=Fit.tx*1+"px";
+		Id.mon_tic.innerHTML=k.tic;
+		Id.mon_tx.innerHTML=k.tx;
+		Id.mon_fps.innerHTML=1000/k.tx;
 
-		App.mont1.style.width=Fit.tx*1*0.7+"px";
-		App.mont2.style.width=Fit.tx*1*0.3+"px";
+		Id.monT.style.width=k.tx*i+"px";
+		Id.mont1.style.width=k.tx*i*0.7+"px";
+		Id.mont2.style.width=k.tx*i*0.3+"px";
 
-		App.monr.style.width=Fit.tr*1+"px";
-		App.monx.innerHTML=Fit.tr;
-//		App.monT.innerHTML="Tx:"+App.tx;
-//		App.monr.innerHTML=App.tr;
+		Id.monr.style.width=k.tr*i+"px";
+		Id.mon_tr.innerHTML=k.tr;
 
-		App.monW.innerHTML=document.body.clientWidth;
-		App.monH.innerHTML=document.body.clientHeight;
+//		Id.monT.innerHTML="Tx:"+App.tx;
+
+		Id.mon_scale.innerHTML=k.scale;
+
+//		Id.monW.innerHTML=document.body.clientWidth;
+		Id.monW.innerHTML=k.dvr.clientWidth;
+//		Id.monH.innerHTML=document.body.clientHeight;
+		Id.monH.innerHTML=k.dvr.clientHeight;
 
 }
 
