@@ -34,7 +34,7 @@ function eval_(i){
 	if(!i) return false;
 	if(isF(i)) return i;
 	try {if(isF(eval(i))) return eval(i);} catch (e) {}
-	if(!isS(i)) return false;
+//	if(!isS(i)) return false;
 	try {return function(k){eval(i)}} catch (e) {}
 	return false;
 }
