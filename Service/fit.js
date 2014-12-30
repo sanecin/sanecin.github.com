@@ -32,6 +32,7 @@ eval_=new Function('return eval(arguments[0]);');// ... dojo ...
 function eval_(i){
 	var e="";
 	if(!i) return false;
+	if(isF(i)) return i;
 	try {if(isF(eval(i))) return eval(i);} catch (e) {}
 	if(!isS(i)) return false;
 	try {return function(k){eval(i)}} catch (e) {}
