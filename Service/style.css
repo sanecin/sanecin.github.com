@@ -112,7 +112,7 @@ h1 {
 	visibility:hidden; /**//* DEBUG +coment */
 }
 
-div[data-mon]>div {border:2px #f0f dotted;}
+/**/div[data-mon]>div {border:2px #f0f inset;}
 
 /*POSITION*/
 .p_a {position:absolute;}
