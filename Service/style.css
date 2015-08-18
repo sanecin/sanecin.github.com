@@ -1,3 +1,4 @@
+/*[http://sanecin.github.io/Service/style.css]*/
 html {font-size: 100%;}
 img { -ms-interpolation-mode: bicubic; }
 svg:not(:root) { overflow: hidden; }
@@ -30,7 +31,7 @@ h1 {
 
 .shifter {
 	position:absolute;
-	/*visibility:hidden;*/
+	visibility:hidden;/**/
 	background:rgba(0,0,0,0.1);
 	bottom:50%;right:50%;
 	/* width:200px;height:100px; */  /*   ... size ... */
@@ -124,4 +125,15 @@ h1 {
 /*FLOAT*/
 .fl_l {float: left;}
 .fl_r {float: right;}
+
+/*OVERFLOW*/
+.o_ {overflow-y:auto;overflow-x:auto;}
+.o_xy {overflow-y:hidden;overflow-x:hidden;}
+.o_x {overflow-y:auto;overflow-x:hidden;}
+.o_y {overflow-y:hidden;overflow-x:auto;}
+.o_e {overflow-x:hidden;text-overflow:ellipsis;}
+
+/*TRANSITIONS*/
+
+.tr_dr05 {-webkit-transition-duration: 1s;-moz-transition-duration: 1s;-o-transition-duration: 1s;}
 
